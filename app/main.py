@@ -1,9 +1,13 @@
 from fastapi import FastAPI
 from sqlalchemy import text
-
+from app.api.test_runs import router as test_runs_router
+from app.api.projects import router as projects_router
 from app.db.session import engine
 
 app = FastAPI(title="QA Analytics Platform")
+
+app.include_router(projects_router)
+app.include_router(test_runs_router)
 
 
 @app.get("/health")
