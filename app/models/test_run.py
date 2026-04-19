@@ -26,6 +26,16 @@ class TestRun(Base):
         nullable=False
     )
 
+    source_name: Mapped[str | None] = mapped_column(
+        String(100),
+        nullable=True
+    )
+
+    external_run_id: Mapped[str | None] = mapped_column(
+        String(255),
+        nullable=True
+    )
+
     status: Mapped[str] = mapped_column(
         String(50),
         nullable=False

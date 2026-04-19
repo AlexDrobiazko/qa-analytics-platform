@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "test_name": "test_login_valid_user",
+      "status": "passed",
+      "duration_ms": 420
+    },
+    {
+      "test_name": "test_checkout_flow",
+      "status": "failed",
+      "duration_ms": 930,
+      "error_message": "Checkout button not clickable"
+    },
+    {
+      "test_name": "test_profile_update",
+      "status": "passed",
+      "duration_ms": 380
+    }
+  ]
+}

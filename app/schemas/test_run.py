@@ -7,6 +7,8 @@ class TestRunCreate(BaseModel):
     project_id: int
     run_name: str
     source_type: str
+    source_name: str | None = None
+    external_run_id: str | None = None
     status: str
     total_tests: int = 0
     passed_tests: int = 0
@@ -18,6 +20,8 @@ class TestRunRead(BaseModel):
     project_id: int
     run_name: str
     source_type: str
+    source_name: str | None
+    external_run_id: str | None
     status: str
     total_tests: int
     passed_tests: int
