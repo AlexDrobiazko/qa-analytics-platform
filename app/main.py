@@ -5,6 +5,8 @@ from app.api.projects import router as projects_router
 from app.api.test_results import router as test_results_router
 from app.api.dashboard import router as dashboard_router
 from app.db.session import engine
+from app.api.ui import router as ui_router
+from app.api.demo_ui import router as demo_ui_router
 
 app = FastAPI(title="QA Analytics Platform")
 
@@ -12,7 +14,8 @@ app.include_router(projects_router)
 app.include_router(test_runs_router)
 app.include_router(test_results_router)
 app.include_router(dashboard_router)
-
+app.include_router(ui_router)
+app.include_router(demo_ui_router)
 
 @app.get("/health")
 def health():
